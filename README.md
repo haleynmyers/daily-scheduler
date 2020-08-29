@@ -2,7 +2,7 @@
 ### A simple daily calendar divided by the hour, conveniently color-coded.
 > Stay organized by entering events into this convenient calendar.
 
-![alt text](scheduler-screengrab.png "Scheduler Screeshot")
+![alt text](assets/titlepage-image.png "Scheduler Screeshot")
 
 *****
 
@@ -17,7 +17,7 @@ clone [this repository](https://github.com/haleynmyers/daily-scheduler) to your 
 
 ## Usage 
 
-![alt text](schedulerAppDemo.gif "Scheduler Demo gif")
+![alt text](assets/dailyScheduler.gif "Scheduler Demo gif")
 
 
 Enter a scheduled event to the corresponding hour on the form provided. Click the blue save button to save that event to your local device, so that even if you refresh your page, the event will be still be there.

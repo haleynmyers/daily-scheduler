@@ -1,7 +1,4 @@
-// var eventInput = ('input').value;
-// var eventInput = "";
-// var calendarDate = moment().format();
-// var $time = moment().hour();
+
 var schedule = [];
 var displayDate = document.getElementById('currentDay');
 var currentTime = moment();
@@ -10,7 +7,6 @@ var todayIs = moment().format('LL');
 
 console.log(currentHour);
 console.log(todayIs);
-
 
 //query the computer to get the current day and time and print in jumbotron 
 $(displayDate).text(todayIs);
@@ -23,7 +19,6 @@ function init() {
       printToCalendar();
 }
 
-  
 function printToCalendar(){
   for (var i = 0; i < schedule.length; i++){
       var index = schedule[i];
@@ -52,10 +47,6 @@ var schedHour = $(this).attr('data-hour');
 
 compareTime(schedHour, currentHour); 
 
-setInterval(function(){
-  var now = moment().format();
-  console.log(now);
-}, 1000);
 
 // save button clickevent. 
 $('.saveBtn').on("click", function(event) {
@@ -72,7 +63,21 @@ $('.saveBtn').on("click", function(event) {
     console.log(schedule);
     storeEvents();
     printToCalendar();
-  });
+  }
+);
+
+
+  function clearCalendar(){
+    localStorage.clear();
+    location.reload();
+  }
+
+$('#resetBtn').on("click", function(event) {
+  event.preventDefault();
+  clearCalendar();
+});
+
+
   
   console.log(schedule);
-  init(); 
+  init();

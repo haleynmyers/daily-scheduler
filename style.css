@@ -16,9 +16,11 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
+  background-image: url(assets/gradient_squares.png);
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px double darkgrey;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .description{
@@ -31,32 +33,38 @@ textarea {
 }
 
 .row {
+  display: flex;
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  font-size: 20px;
+  justify-content: flex-start;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  font-size: 16px;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: lightgray;
   color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .present {
-  background-color: #392abe;
-  color: white;
+  background-color: #9b95d1;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .future {
-  background-color: #0f860f;
-  color: white;
+  background-color: #54ece5;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
