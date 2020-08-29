@@ -17,6 +17,9 @@ clone [this repository](https://github.com/haleynmyers/daily-scheduler) to your 
 
 ## Usage 
 
+![alt text](schedulerAppDemo.gif "Scheduler Demo gif")
+
+
 Enter a scheduled event to the corresponding hour on the form provided. Click the blue save button to save that event to your local device, so that even if you refresh your page, the event will be still be there.
 
 For best results, preface your event with the time before saving such as "10:15 Meeting".

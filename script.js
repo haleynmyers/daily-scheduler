@@ -1,21 +1,20 @@
-var schedule = [];
-var eventInput = ('input').value;
-var calendarHour = $(this).attr('data-hour');
+// var eventInput = ('input').value;
+// var eventInput = "";
 // var calendarDate = moment().format();
-var $time = moment().hour();
+// var $time = moment().hour();
+var schedule = [];
 var displayDate = document.getElementById('currentDay');
 var currentTime = moment();
 var currentHour = moment().hour();
 var todayIs = moment().format('LL');
-var eventInput = "";
 
-console.log($time);
+console.log(currentHour);
 console.log(todayIs);
 
 
-// //query the computer to get the current day and time and print in jumbotron 
+//query the computer to get the current day and time and print in jumbotron 
 $(displayDate).text(todayIs);
-//   //access loca storage if there is already calendar event, and populate schedule
+//access local storage if there is already calendar event, and populate schedule
 function init() {
     var storedEvents = JSON.parse(localStorage.getItem("schedule"));
     if (storedEvents) {
@@ -37,20 +36,21 @@ function storeEvents() {
     localStorage.setItem("schedule", JSON.stringify(schedule));
 }
 
-//   //if statement that compares the current time to each row's id and adds the appr class to change background 
+//if statement that compares the current time to time on sched to change background 
 function compareTime () {
-  $("input").each(function(response){
+  $("input").each(function(response) {
       var schedHour = response + 9;
-    if (schedHour > currentHour) {
-      $(this).addClass('future');
-    }else if(schedHour < currentHour) {
+    if(schedHour < currentHour) {
       $(this).addClass('past');
+    }else if (schedHour > currentHour) {
+      $(this).addClass('future');
     }else if(schedHour === currentHour) {
       $(this).addClass('present');
   }});
 }
+var schedHour = $(this).attr('data-hour');
 
-compareTime(calendarHour, $time);
+compareTime(schedHour, currentHour); 
 
 setInterval(function(){
   var now = moment().format();
